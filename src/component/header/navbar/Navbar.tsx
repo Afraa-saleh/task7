@@ -40,20 +40,20 @@ export default function Navbar() {
   return (
     <>
       <nav className={`w-lvw fixed top-0 left-0 z-50 transition-colors duration-300 ${scrolled ? 'bg-textc' : 'bg-white/20'}`}>
-        <div className='max-w-7xl mx-auto flex items-center justify-between py-4 sm:px-6 px-4'>
+        <div className='relative max-w-7xl mx-auto flex items-center justify-between py-4 sm:px-6 px-4'>
 
           <div>
             <img src='/images/logo/logo.png' alt='logo'  className='w-[80px] h-[70px]' />
           </div>
 
 
-          <div className='hidden md:flex gap-4 font-semibold'>
+        <div className='hidden lg:flex gap-6 font-semibold absolute left-1/2 transform -translate-x-1/2'>
             {navLinks.map((link) => {
                const isActive = pathname === link.path;
               return(
 
                 <Link key={link.label} href={link.path}
-                  className={`font-OpenSans hover:text-mainBg transition relative ${isActive ? 'text-mainBg after:absolute after:-bottom-1 after:left-0 after:w-full after:h-[2px] after:bg-mainBg' : 'text-white'}`}>
+                  className={`hover:text-mainBg transition relative ${isActive ? 'text-mainBg after:absolute after:-bottom-1 after:left-0 after:w-full after:h-[2px] after:bg-mainBg' : 'text-white'}`}>
                   {link.label}</Link>
 
               );
@@ -63,7 +63,7 @@ export default function Navbar() {
 
           <div className='flex items-center gap-3'>
 
-            <div className='hidden md:flex items-center justify-center md:gap-3 lg:gap-8'>
+            <div className='hidden lg:flex items-center justify-center md:gap-3 lg:gap-8'>
               <select value={language} onChange={(e) => setLanguage(e.target.value)}  className='bg-transparent text-white focus:outline-none'>
 
                 <option value='EN'>EN</option>
@@ -84,7 +84,7 @@ export default function Navbar() {
                  </div>
 
 
-            <button onClick={() => setMenuOpen(true)}  className='text-white text-2xl md:hidden'> &#9776;</button>
+            <button onClick={() => setMenuOpen(true)}  className='text-white text-2xl lg:hidden'>&#9776;</button>
 
           </div>
         </div>

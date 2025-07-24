@@ -34,7 +34,7 @@ export default function SignUp({ onClose }: Props) {
             <input
               type='email'
               placeholder='Enter your name and surname'
-              className='w-full px-4 py-3 lg:py-4 border border-textc/20 rounded focus:outline-none  focus:border-mainBg'
+              className='w-full px-4 py-2 lg:py-4 border border-textc/20 rounded focus:outline-none  focus:border-mainBg'
               value={email}
               onChange={(e) => setEmail(e.target.value)} />
           </div>
@@ -44,7 +44,7 @@ export default function SignUp({ onClose }: Props) {
             <input
               type='email'
               placeholder='Enter your email address'
-              className='w-full px-4 py-3 lg:py-4 border border-textc/20 rounded focus:outline-none  focus:border-mainBg'
+              className='w-full px-4 py-2 lg:py-4 border border-textc/20 rounded focus:outline-none  focus:border-mainBg'
               value={email}
               onChange={(e) => setEmail(e.target.value)} />
           </div>
@@ -55,7 +55,7 @@ export default function SignUp({ onClose }: Props) {
             <input
               type={showPassword ? 'text' : 'password'}
               placeholder='Enter your password'
-              className='w-full px-4 py-3 lg:py-4 pr-12 border border-textc/20 rounded focus:outline-none focus:border-mainBg'
+              className='w-full px-4 py-2 lg:py-4 pr-12 border border-textc/20 rounded focus:outline-none focus:border-mainBg'
               value={password}
               onChange={(e) => setPassword(e.target.value)} />
 

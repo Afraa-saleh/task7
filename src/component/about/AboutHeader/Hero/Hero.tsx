@@ -80,7 +80,7 @@ export default function HeroAbout({images, title, subtitle }: Props) {
 
         <p className='text-lg md:text-2xl text-white mb-8 lg:px-64'>{typedSubtitle}</p>
 
-        <button className='bg-transparent border border-white text-2xl text-white p-4 rounded-4xl hover:bg-mainBg cursor-pointer'>View our Tour Packages</button>
+        <button className='bg-transparent border border-white text-xl lg:text-2xl text-white p-2 lg:p-4 rounded-4xl hover:bg-mainBg cursor-pointer'>View our Tour Packages</button>
 
       </div>
     </section>
